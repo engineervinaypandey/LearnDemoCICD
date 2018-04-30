@@ -22,7 +22,7 @@ public class LoginPage {
 	@FindBy(xpath = "//input[@name='txtPassword']") WebElement passWord;
 	@FindBy(xpath = ".//input[@name='Submit']") WebElement submitButton;
 
-	By createButtonLink = By.xpath(".//a[text()='Create']");
+	By dashboardLink = By.linkText("Dashboard");
 
 	// Method to login and click on sing in button.
 	public void sendLogin(String user, String pass) {
@@ -35,10 +35,10 @@ public class LoginPage {
 
 		WebDriverWait wait = new WebDriverWait(driver, 20);
 
-		WebElement createElement = wait.until(ExpectedConditions.presenceOfElementLocated(createButtonLink));
+		WebElement DashboardElement = wait.until(ExpectedConditions.presenceOfElementLocated(dashboardLink));
 
-		String createText = createElement.getText();
+		String DashboardText = DashboardElement.getText();
 
-		assertEquals(createText, "Create", "Login case is not verified, as Create text is not visible");
+		assertEquals(DashboardText, "Dashboard", "Login case is not verified, as Dashboard text is not visible");
 	}
 }

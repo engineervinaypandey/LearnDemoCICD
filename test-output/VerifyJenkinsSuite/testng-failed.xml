@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite name="Failed suite [VerifyJenkinsSuite]">
+  <test name="LoginSmoke(failed)">
     <classes>
+      <class name="testcases.VerifyHomePage">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testcases.VerifyHomePage -->
       <class name="testcases.VerifyLoginPage">
         <methods>
           <include name="tearDown"/>
@@ -11,5 +17,5 @@
         </methods>
       </class> <!-- testcases.VerifyLoginPage -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- LoginSmoke(failed) -->
+</suite> <!-- Failed suite [VerifyJenkinsSuite] -->

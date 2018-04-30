@@ -50,7 +50,7 @@ public class VerifyLoginPage {
 				DataProviderFactory.getExcel().getData(0, 0, 1));
 		logger.log(LogStatus.PASS, "User logged in successfully.");
 
-		logger.log(LogStatus.INFO, "Verify Create Button after login");
+		logger.log(LogStatus.INFO, "Verify Dashboard Button after login");
 
 		logger.log(LogStatus.INFO,
 				logger.addScreenCapture(Helper.CaptureScreenShots(driver, "UserLoggedInSuccesfully")));
